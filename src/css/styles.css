@@ -1,0 +1,368 @@
+/* CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto+Slab:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: "Spartan", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #D4F1F4;
+    overflow-x: hidden;
+}
+
+main {
+    padding: 20px;
+}
+
+main p {
+    margin: 15px 0 20px 0;
+    text-align: justify;
+}
+
+/* Navbar */
+
+nav {
+    display: flex;
+    background: linear-gradient(to bottom, #75E6DA, #189AB4);
+    justify-content: space-around;
+    padding: 20px 0;
+    color: #ffffff;
+    height: 100px;
+    align-items: center;
+}
+
+nav .logo {
+    font-family: 'Roboto Slab';
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 1em;
+    padding: 5px;
+    transition: 0.3 ease;
+    font-weight: 700;
+}
+
+nav ul li a:hover {
+    font-style: italic;
+    color: #05445E;
+}
+
+/* Navbar Responsive*/
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 23px;
+    height: 30px;
+    left: -4px;
+    top: -7px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.jumbotron picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.jumbotron img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.5);
+}
+
+.jumbotron .motif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    white-space: normal;
+    z-index: 1;
+}
+
+.jumbotron .motif h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 1px 1px #141414;
+}
+
+.jumbotron .motif p {
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 1px 1px #141414;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+/* About */
+
+.card {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+}
+
+#about img {
+    display: flex;
+    width: 50%;
+    height: auto;
+}
+
+#about h2,
+p {
+    padding-left: 40px;
+}
+
+
+
+/* BMI Calculator */
+
+
+#calculator {
+    background-color: #189AB4;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+}
+#result {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+#category-description {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: none;
+    font-size: 24px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+}
+#risk-description {
+    display: grid;
+   
+    gap: 20px;
+    background-color: #D4F1F4;
+    padding: 10px;
+    display: none;
+}
+#risk-description > div {
+    margin: 15px 0 20px 0;
+    text-align: justify;
+    color: black;
+}
+#calculator h2 {
+    margin-bottom: 10px;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 24px;
+    font-weight: 900;
+    color: #141414;
+    text-align: center;
+}
+#bmi-form {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.input-group {
+  margin-bottom: 10px;
+}
+.input-group label {
+  color: #141414;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: 'Roboto Slab';
+}
+.input-group input[type="number"] {
+  width: 100%;
+  height: 6vh;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.radio-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+  height: 6vh;
+}
+.radio-group label {
+  color: #141414;
+  font-size: 18px;
+}
+.button-group {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+  margin-top: 20px;
+}
+
+.button-group button {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #145DA0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: 'Roboto Slab';
+}
+.button-group button:hover {
+  background-color: #05445E;
+}
+
+
+/* Contact */
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color:#f9f9f9 ;
+}
+
+.aside-container {
+  display: flex;
+  flex-wrap: wrap; 
+  max-width: 800px; 
+  margin: 0 auto;
+}
+
+.download-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 10px; 
+}
+
+.download-section {
+  text-align: center;
+}
+
+.download-section h2 {
+  margin-bottom: 20px;
+}
+
+.download-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-buttons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.download-buttons img {
+  width: 200px; 
+}
+
+.contact-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  margin: 10px; 
+}
+
+.contact-section h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.contact-info a {
+  display: inline-block;
+  margin: 10px; 
+  color: #333; 
+  font-size: 24px; 
+  text-decoration: none;
+}
+
+.contact-info i:hover {
+  color: #007bff; 
+}
+
+/* footer */
+
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #05445E;
+   text-align: center;
+   font-weight: 400;
+   font-family: 'Open Sans', sans-serif;
+}
+  

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Health Calculator</title>
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+
+    <nav>
+        <div class="logo">
+            <h1 aria-label="Health Calculator" tabindex="0">Health Calculator</h1>
+        </div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#calculator">Calculator</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Navbar Responsive Start -->
+
+        <div class="menu-toggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Jumbotron -->
+
+    <div class="jumbotron">
+        <img src="src/img/hero.png" alt="jumbotron-image">
+        <div class="motif">
+            <h1>Health Calculator</h1>
+            <p>Get the Numbers You Need for a Healthier You with our BMI Calculator!!!</p>
+        </div>
+    </div>
+
+    <!-- Main Start -->
+
+    <main>
+        <article id="about" class="card">
+            <img src="src/img/about.png" alt="">
+            <p> Welcome to our BMI Calculator 🌈. BMI, or Body Mass Index, is a numerical value that indicates whether
+                an individual has a healthy weight in relation to their height. It is a widely accepted measure used by
+                healthcare professionals to assess an individual's weight status and associated health risks.
+                Understanding your BMI is crucial for maintaining a healthy weight and making informed decisions about
+                your lifestyle. With our user-friendly calculator, you can easily determine your BMI and embark on a
+                journey towards a healthier and happier you. <br> By utilizing our BMI Calculator, you are taking a
+                proactive step towards understanding your weight status and making informed decisions about your health.
+                Remember, BMI is just one aspect of your overall well-being, and maintaining a healthy lifestyle
+                involves various factors such as regular exercise, balanced nutrition, and self-care. <br> Please
+                remember that BMI is a useful tool for most adults; however, it may not accurately reflect the health
+                of athletes, pregnant women, or individuals with a high muscle mass. For a comprehensive health
+                assessment, consult with a healthcare professional. <br><br>
+                <marquee bgcolor="#189AB4" loop="-1" scrollamount="5"
+                    width="100%">💡 Remember: Your BMI is more than just a number; it's a pathway to a healthier and
+                    happier you. Calculate your BMI now and let's embark on this transformative journey
+                    together!</marquee>
+            </p>
+        </article>
+
+        <article id="calculator" class="card">
+            <h2>BMI Calculator</h2>
+            <form id="bmi-form">
+                <div class="container">
+                    <div class="input-group">
+                        <label for="gender">Gender :</label>
+                        <div class="radio-group">
+                            <label for="female">
+                                <input type="radio" id="female" name="gender" value="female" checked>Female
+                            </label>
+                            <label for="male">
+                                <input type="radio" id="male" name="gender" value="male">Male
+                            </label>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="age">Age :</label>
+                        <input type="number" id="age" name="age" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="height">Height (cm) :</label>
+                        <input type="number" id="height" name="height" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="weight">Weight (kg) :</label>
+                        <input type="number" id="weight" name="weight" required>
+                    </div>
+                    <div class="button-group">
+                        <button type="submit" id="calculate-btn">Calculate</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+            <div id="result" class="result"></div>
+            <div id="bmi-description" class="result">
+                <div id="category-description"></div>
+                <div id="risk-description"></div>
+            </div>
+        </article>
+
+        <aside class="card" id="contact">
+            <div class="aside-container">
+                <div class="download-container">
+                    <div class="download-section">
+                        <h2>Download Our App</h2>
+                        <div class="download-buttons">
+                            <button onclick="openAppStore()">
+                                <img src="src/img/app.jpg" alt="Download on the App Store">
+                            </button>
+                            <button onclick="openGooglePlay()">
+                                <img src="src/img/play.jpg" alt="Get it on Google Play">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-section">
+                    <h2>Contact Us</h2>
+                    <div class="contact-info">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="far fa-envelope"></i></a>
+                        <a href="#"><i class="fas fa-phone"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Main End -->
+    <footer>Health Calculator &#169; 2023, Sakhila Yunara Devras </footer>
+
+    <script src="src/js/index.js"></script>
+</body>
+
+</html>
